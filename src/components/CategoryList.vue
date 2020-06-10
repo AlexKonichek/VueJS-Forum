@@ -1,15 +1,15 @@
 <template>
   <div>
     <CategoryListItem
-      v-for="(category, index) in categories"
+      v-for="category in categories"
       :category="category"
-      :key="index"
+      :key="category['.key']"
     />
   </div>
 </template>
 
 <script>
-import CategoryListItem from "@/components/CategoryListItem";
+import CategoryListItem from "./CategoryListItem";
 export default {
   components: {
     CategoryListItem

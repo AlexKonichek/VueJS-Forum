@@ -2,11 +2,12 @@
   <div id="app">
     <TheNavbar />
     <div class="container">
-      <router-view v-show="showPage" @readyData="pageReady" />
+      <router-view v-show="showPage" @ready="pageReady" />
       <AppSpinner v-show="!showPage" />
     </div>
   </div>
 </template>
+
 <script>
 import TheNavbar from "@/components/TheNavbar";
 import AppSpinner from "@/components/AppSpinner";
@@ -41,11 +42,11 @@ export default {
   }
 };
 </script>
+
 <style>
 @import "assets/css/style.css";
 @import "~nprogress/nprogress.css";
 #nprogress .bar {
-  background: green;
-  height: 4npm px;
+  background: #57ad8d;
 }
 </style>

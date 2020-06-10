@@ -4,6 +4,7 @@
     <CategoryListItem :category="category" />
   </div>
 </template>
+
 <script>
 import { mapActions } from "vuex";
 import CategoryListItem from "@/components/CategoryListItem";
@@ -29,7 +30,6 @@ export default {
   },
   created() {
     this.fetchCategory({ id: this.id })
-
       .then(category => this.fetchForums({ ids: category.forums }))
       .then(() => {
         this.asyncDataStatus_fetched();
@@ -37,4 +37,5 @@ export default {
   }
 };
 </script>
+
 <style scoped></style>

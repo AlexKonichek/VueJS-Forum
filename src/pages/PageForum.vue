@@ -17,11 +17,13 @@
         </router-link>
       </div>
     </div>
+
     <div class="col-full push-top">
       <ThreadList :threads="threads" />
     </div>
   </div>
 </template>
+
 <script>
 import { mapActions } from "vuex";
 import ThreadList from "@/components/ThreadList";
@@ -52,7 +54,6 @@ export default {
   },
   created() {
     this.fetchForum({ id: this.id })
-
       .then(forum => this.fetchThreads({ ids: forum.threads }))
       .then(threads =>
         Promise.all(
@@ -65,6 +66,7 @@ export default {
   }
 };
 </script>
+
 <style scoped>
 .forum-wrapper {
   width: 100%;

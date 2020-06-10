@@ -4,6 +4,7 @@
     <CategoryList :categories="categories" />
   </div>
 </template>
+
 <script>
 import { mapActions } from "vuex";
 import CategoryList from "@/components/CategoryList";

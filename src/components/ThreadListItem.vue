@@ -10,8 +10,7 @@
       </p>
       <p class="text-faded text-xsmall">
         By <a href="#">{{ user.name }}</a
-        >,
-        <AppDate :timestamp="thread.publishedAt" />
+        >, <AppDate :timestamp="thread.publishedAt" />.
       </p>
     </div>
 
@@ -31,7 +30,6 @@
 </template>
 
 <script>
-import { countObjectProperties } from "@/utils";
 export default {
   props: {
     thread: {

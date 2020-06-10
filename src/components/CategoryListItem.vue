@@ -5,11 +5,13 @@
         {{ category.name }}
       </router-link>
     </h2>
+
     <ForumList :forums="categoryForums" />
   </div>
 </template>
+
 <script>
-import ForumList from "@/components/ForumList";
+import ForumList from "./ForumList";
 export default {
   components: {
     ForumList
@@ -29,3 +31,5 @@ export default {
   }
 };
 </script>
+
+<style scoped></style>

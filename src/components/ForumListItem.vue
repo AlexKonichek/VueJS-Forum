@@ -3,23 +3,24 @@
     <div class="forum-details">
       <router-link
         class="text-xlarge"
-        :to="{
-          name: 'Forum',
-          params: {
-            id: forum['.key']
-          }
-        }"
-        >{{ forum.name }}
+        :to="{ name: 'Forum', params: { id: forum['.key'] } }"
+      >
+        {{ forum.name }}
       </router-link>
-      <p>{{ forum.desctiption }}</p>
+      <p>{{ forum.description }}</p>
     </div>
-    <div class="thread-count">
+
+    <div class="threads-count">
       <p class="count">{{ threadsCount }}</p>
       {{ threadsCount === 1 ? "thread" : "threads" }}
     </div>
-    <div class="last-thread"></div>
+
+    <div class="last-thread">
+      <!-- TODO: implement later -->
+    </div>
   </div>
 </template>
+
 <script>
 import { countObjectProperties } from "@/utils";
 export default {
@@ -36,3 +37,5 @@ export default {
   }
 };
 </script>
+
+<style scoped></style>

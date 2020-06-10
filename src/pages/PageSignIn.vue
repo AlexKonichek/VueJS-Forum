@@ -3,6 +3,7 @@
     <div class="col-2">
       <form @submit.prevent="signIn" class="card card-form">
         <h1 class="text-center">Login</h1>
+
         <div class="form-group">
           <label for="email">Email</label>
           <input
@@ -21,15 +22,18 @@
             class="form-input"
           />
         </div>
+
         <div class="push-top">
           <button type="submit" class="btn-blue btn-block">Log in</button>
         </div>
+
         <div class="form-actions text-right">
           <router-link :to="{ name: 'Register' }"
             >Create an account?</router-link
           >
         </div>
       </form>
+
       <div class="push-top text-center">
         <button @click="signInWithGoogle" class="btn-red btn-xsmall">
           <i class="fa fa-google fa-btn"></i>Sign in with Google
@@ -38,6 +42,7 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
   data() {
@@ -55,14 +60,12 @@ export default {
           email: this.form.email,
           password: this.form.password
         })
-
         .then(() => this.successRedirect())
         .catch(error => alert("🤷‍️" + error.message));
     },
     signInWithGoogle() {
       this.$store
         .dispatch("signInWithGoogle")
-
         .then(() => this.successRedirect())
         .catch(error => alert("🤷‍️" + error.message));
     },
@@ -72,8 +75,9 @@ export default {
     }
   },
   created() {
-    this.$emit("readyData");
+    this.$emit("ready");
   }
 };
 </script>
+
 <style scoped></style>

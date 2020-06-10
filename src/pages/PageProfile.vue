@@ -3,7 +3,6 @@
     <UserProfileCard v-if="!edit" :user="user" />
     <UserProfileCardEditor v-else :user="user" />
 
-    <!--<div class="col-7 push-top">-->
     <div class="col-7 push-top">
       <div class="profile-header">
         <span class="text-lead"> {{ user.username }}'s recent activity </span>
@@ -50,4 +49,5 @@ export default {
   }
 };
 </script>
+
 <style scoped></style>

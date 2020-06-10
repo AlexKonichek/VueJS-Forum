@@ -4,6 +4,7 @@ export default {
   authUser(state) {
     return state.authId ? state.users[state.authId] : null;
   },
+
   userPosts: state => id => {
     const user = state.users[id];
     if (user.posts) {

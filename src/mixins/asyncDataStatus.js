@@ -8,7 +8,7 @@ export default {
   methods: {
     asyncDataStatus_fetched() {
       this.asyncDataStatus_ready = true;
-      this.$emit("readyData");
+      this.$emit("ready");
     }
   }
 };

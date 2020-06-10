@@ -3,6 +3,7 @@
     <router-link :to="{ name: 'Home' }" class="logo">
       <img src="../assets/img/vueschool-logo.svg" />
     </router-link>
+
     <div class="btn-hamburger">
       <!-- use .btn-humburger-active to open the menu -->
       <div class="top bar"></div>
@@ -25,6 +26,7 @@
               />
             </span>
           </a>
+
           <!-- dropdown menu -->
           <!-- add class "active-drop" to show the dropdown -->
           <div id="user-dropdown" :class="{ 'active-drop': userDropdownOpen }">
@@ -59,7 +61,7 @@ import { mapGetters } from "vuex";
 export default {
   data() {
     return {
-      userDropdownOpen: true
+      userDropdownOpen: false
     };
   },
   computed: {

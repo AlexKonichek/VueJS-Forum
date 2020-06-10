@@ -12,6 +12,7 @@ import Register from "@/pages/PageRegister";
 import SignIn from "@/pages/PageSignIn";
 import NotFound from "@/pages/PageNotFound";
 Vue.use(Router);
+
 const router = new Router({
   routes: [
     {
@@ -93,8 +94,10 @@ const router = new Router({
   ],
   mode: "history"
 });
+
 router.beforeEach((to, from, next) => {
   console.log(`🚦 navigating to ${to.name} from ${from.name}`);
+
   store.dispatch("initAuthentication").then(user => {
     if (to.matched.some(route => route.meta.requiresAuth)) {
       // protected route
@@ -115,4 +118,5 @@ router.beforeEach((to, from, next) => {
     }
   });
 });
+
 export default router;

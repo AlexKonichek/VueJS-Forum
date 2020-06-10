@@ -3,10 +3,12 @@
     <div class="col-2">
       <form @submit.prevent="register" class="card card-form">
         <h1 class="text-center">Register</h1>
+
         <div class="form-group">
           <label for="name">Full Name</label>
           <input v-model="form.name" id="name" type="text" class="form-input" />
         </div>
+
         <div class="form-group">
           <label for="username">Username</label>
           <input
@@ -16,6 +18,7 @@
             class="form-input"
           />
         </div>
+
         <div class="form-group">
           <label for="email">Email</label>
           <input
@@ -25,6 +28,7 @@
             class="form-input"
           />
         </div>
+
         <div class="form-group">
           <label for="password">Password</label>
           <input
@@ -34,6 +38,7 @@
             class="form-input"
           />
         </div>
+
         <div class="form-group">
           <label for="avatar">Avatar</label>
           <input
@@ -43,6 +48,7 @@
             class="form-input"
           />
         </div>
+
         <div class="form-actions">
           <button type="submit" class="btn-blue btn-block">Register</button>
         </div>
@@ -55,6 +61,7 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
   data() {
@@ -72,13 +79,11 @@ export default {
     register() {
       this.$store
         .dispatch("registerUserWithEmailAndPassword", this.form)
-
         .then(() => this.successRedirect());
     },
     registerWithGoogle() {
       this.$store
         .dispatch("signInWithGoogle")
-
         .then(() => this.successRedirect());
     },
     successRedirect() {
@@ -87,8 +92,9 @@ export default {
     }
   },
   created() {
-    this.$emit("readyData");
+    this.$emit("ready");
   }
 };
 </script>
+
 <style scoped></style>

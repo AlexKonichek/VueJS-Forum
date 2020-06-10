@@ -13,6 +13,7 @@
     />
   </div>
 </template>
+
 <script>
 import { mapActions } from "vuex";
 import ThreadEditor from "@/components/ThreadEditor";
@@ -83,4 +84,5 @@ export default {
   }
 };
 </script>
+
 <style scoped></style>
