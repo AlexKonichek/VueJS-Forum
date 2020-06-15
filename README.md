@@ -1,6 +1,6 @@
 # forum-on-vuejs
-[demo](vue-forum-d6ba2.web.app)
-demo vue-forum-d6ba2.web.app
+[demo](https://vue-forum-d6ba2.web.app/)
+
 ## Project setup
 ```
 npm install
