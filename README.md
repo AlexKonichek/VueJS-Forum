@@ -1,5 +1,5 @@
 # forum-on-vuejs
-demo https://alexkonichek.github.io/Awesome-Forum-/index.html
+demo vue-forum-d6ba2.web.app
 ## Project setup
 ```
 npm install
